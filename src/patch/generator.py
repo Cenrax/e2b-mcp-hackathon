@@ -32,7 +32,7 @@ Format: package==version
 """
         
         response = await self.client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4.1",
             messages=[
                 {"role": "system", "content": "You are a security patch generator."},
                 {"role": "user", "content": prompt}
@@ -71,13 +71,13 @@ Keep it minimal - just verify the package works after upgrade.
 Return ONLY the Python code, no markdown or explanation."""
         
         response = await self.client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4.1",
             messages=[
                 {"role": "system", "content": "You are a Python test generator."},
                 {"role": "user", "content": prompt}
             ],
             temperature=0.3,
-            max_tokens=200
+            max_tokens=2000
         )
         
         test_code = response.choices[0].message.content.strip()

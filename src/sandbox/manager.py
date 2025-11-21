@@ -27,14 +27,15 @@ class SandboxManager:
         """Create a new E2B sandbox"""
         logger.info("Creating E2B sandbox...")
         
-        self.sandbox = await Sandbox.create(api_key=settings.e2b_api_key)
+        # E2B Sandbox.create() is synchronous
+        self.sandbox = Sandbox.create(api_key=settings.e2b_api_key)
         logger.info(f"✓ Sandbox created: {self.sandbox.sandbox_id}")
         return self.sandbox
     
     async def close_sandbox(self) -> None:
         """Close the sandbox"""
         if self.sandbox:
-            await self.sandbox.close()
+            self.sandbox.kill()
             logger.info("Sandbox closed")
     
     async def install_requirements(self, requirements: str) -> TestResult:
@@ -45,11 +46,11 @@ class SandboxManager:
         logger.info("Installing requirements in sandbox...")
         
         # Write requirements.txt
-        await self.sandbox.filesystem.write("requirements.txt", requirements)
+        self.sandbox.files.write("requirements.txt", requirements)
         
-        # Install packages
-        execution = await self.sandbox.run_code(
-            "!pip install -q -r requirements.txt"
+        # Install packages (remove -q to see output)
+        execution = self.sandbox.run_code(
+            "!pip install -r requirements.txt"
         )
         
         success = not execution.error
@@ -71,7 +72,7 @@ class SandboxManager:
         
         logger.info("Running test in sandbox...")
         
-        execution = await self.sandbox.run_code(test_code)
+        execution = self.sandbox.run_code(test_code)
         
         success = not execution.error
         if success:
