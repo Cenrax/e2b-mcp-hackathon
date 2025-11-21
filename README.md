@@ -2,16 +2,16 @@
 
 An intelligent DevSecOps orchestrator that combines E2B sandboxes with Docker MCP servers to create a self-healing, security-first CI/CD pipeline.
 
-> **🚀 New here?** Start with **[GETTING_STARTED.md](GETTING_STARTED.md)** for a 10-minute setup guide!  
-> **📖 Looking for docs?** See **[INDEX.md](INDEX.md)** for complete documentation index.
+> **New here?** Start with **[GETTING_STARTED.md](GETTING_STARTED.md)** for a 10-minute setup guide!  
+> **Looking for docs?** See **[INDEX.md](INDEX.md)** for complete documentation index.
 
 ## Features
 
-- 🔍 **Automated Vulnerability Detection**: Scans repositories for security issues
-- 🤖 **AI-Powered Patch Generation**: Uses OpenAI GPT-4 to generate fixes
-- 🧪 **Isolated Testing**: Tests patches in secure E2B sandboxes
-- 🔄 **Automated PR Creation**: Creates pull requests via GitHub MCP
-- 📢 **Team Notifications**: Sends alerts via Slack MCP
+- **Automated Vulnerability Detection**: Scans repositories for security issues
+- **AI-Powered Patch Generation**: Uses OpenAI GPT-4 to generate fixes
+- **Isolated Testing**: Tests patches in secure E2B sandboxes
+- **Automated PR Creation**: Creates pull requests via GitHub MCP
+- **Team Notifications**: Sends alerts via Slack MCP
 
 ## Architecture
 
@@ -96,7 +96,7 @@ src/
 
 See [PROGRESS.md](PROGRESS.md) for implementation status.
 
-## 📚 Documentation
+## Documentation
 
 - **[SETUP.md](SETUP.md)** - Complete setup instructions
 - **[IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md)** - Implementation details
@@ -106,19 +106,19 @@ See [PROGRESS.md](PROGRESS.md) for implementation status.
 - **[docs/features.md](docs/features.md)** - Feature list
 - **[docs/plan.md](docs/plan.md)** - Original project plan
 
-## 🎯 Key Features Implemented
+## Key Features Implemented
 
-✅ MCP client connecting to Docker MCP Gateway  
-✅ GitHub integration via pre-built MCP server  
-✅ Slack notifications via pre-built MCP server  
-✅ Vulnerability scanning for Python dependencies  
-✅ AI-powered patch generation with OpenAI GPT-4  
-✅ Isolated testing in E2B sandboxes  
-✅ Complete pipeline orchestration  
-✅ CLI interface with rich output  
-✅ Example scripts and documentation  
+- MCP client connecting to Docker MCP Gateway  
+- GitHub integration via pre-built MCP server  
+- Slack notifications via pre-built MCP server  
+- Vulnerability scanning for Python dependencies  
+- AI-powered patch generation with OpenAI GPT-4  
+- Isolated testing in E2B sandboxes  
+- Complete pipeline orchestration  
+- CLI interface with rich output  
+- Example scripts and documentation  
 
-## 🏗️ Tech Stack
+## Tech Stack
 
 | Component | Technology |
 |-----------|-----------|
@@ -130,7 +130,7 @@ See [PROGRESS.md](PROGRESS.md) for implementation status.
 | CLI Framework | Click + Rich |
 | Configuration | Pydantic Settings |
 
-## 📊 Project Stats
+## Project Stats
 
 - **Lines of Code**: ~1,040
 - **Python Files**: 20
