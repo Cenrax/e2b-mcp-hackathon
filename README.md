@@ -130,13 +130,6 @@ See [PROGRESS.md](PROGRESS.md) for implementation status.
 | CLI Framework | Click + Rich |
 | Configuration | Pydantic Settings |
 
-## Project Stats
-
-- **Lines of Code**: ~1,040
-- **Python Files**: 20
-- **Components**: 7 major modules
-- **Examples**: 3 demo scripts
-- **Documentation**: 8 files
 
 ## License
 
