@@ -102,9 +102,8 @@ See [PROGRESS.md](PROGRESS.md) for implementation status.
 - **[IMPLEMENTATION_SUMMARY.md](IMPLEMENTATION_SUMMARY.md)** - Implementation details
 - **[PROGRESS.md](PROGRESS.md)** - Development progress
 - **[PROJECT_TREE.md](PROJECT_TREE.md)** - Project structure
-- **[docs/architecture.md](docs/architecture.md)** - Technical architecture
+- **[docs/architecture.md](architecture.md)** - Technical architecture
 - **[docs/features.md](docs/features.md)** - Feature list
-- **[docs/plan.md](docs/plan.md)** - Original project plan
 
 ## Key Features Implemented
 
